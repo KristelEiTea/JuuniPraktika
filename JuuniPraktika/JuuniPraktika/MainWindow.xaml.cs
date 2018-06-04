@@ -77,5 +77,12 @@ namespace JuuniPraktika
             PlannerListBox.Items.Refresh();
             (PlannerListBox.SelectedItem as Planner).Used = MoneyUsedThatDay;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPlanner eventx = new EventPlanner();
+            eventx.Show();
+         
+        }
     }
 }
