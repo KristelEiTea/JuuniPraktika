@@ -25,7 +25,12 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button x:Name="MonthlyMoney" Content="Insert money for month" HorizontalAlignment="Left" Margin="505,29,0,0" VerticalAlignment="Top" Width="176" Height="25" Click="MonthlyMoney_Click"/>
         <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="505,341,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click" RenderTransformOrigin="1.237,2.468"/>
+        <TextBox x:Name="OneMonthMoney" HorizontalAlignment="Left" Height="23" Margin="492,38,0,0" TextWrapping="Wrap" Text="ex. 500" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="OneMonthOK" Content="OK" HorizontalAlignment="Left" Margin="626,38,0,0" VerticalAlignment="Top" Width="44" Click="OneMonthOK_Click" Height="23"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="492,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label" Content="Insert your monthly income here:" HorizontalAlignment="Left" Margin="478,7,0,0" VerticalAlignment="Top" Width="190"/>
+        <TextBox x:Name="MoneyUsedThisDay" HorizontalAlignment="Left" Height="23" Margin="492,115,0,0" TextWrapping="Wrap" Text="MoneyUsedThisDay" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="MoneyUsedOK" Content="OK" HorizontalAlignment="Left" Margin="626,115,0,0" VerticalAlignment="Top" Width="44" Height="23" Click="MoneyUsedOK_Click"/>
     </Grid>
 </Window>

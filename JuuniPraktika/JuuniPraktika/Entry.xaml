@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Entry" Height="244.615" Width="303.846">
     <Grid>
-        <Button x:Name="EntryMoney" Content="Money planner" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <Button x:Name="EntryMoney" Content="Money planner" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Width="220" Height="25" Click="EntryMoney_Click"/>
         <Button x:Name="EntryEvent" Content="Event calendar" HorizontalAlignment="Left" Margin="39,97,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
         <Button x:Name="EntryVacation" Content="Vacation planner" HorizontalAlignment="Left" Margin="39,127,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
         <Button x:Name="EntryHangman" Content="Hangman" HorizontalAlignment="Left" Margin="39,170,0,0" VerticalAlignment="Top" Width="220" Height="25"/>

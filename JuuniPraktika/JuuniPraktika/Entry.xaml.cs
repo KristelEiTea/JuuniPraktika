@@ -23,5 +23,10 @@ namespace JuuniPraktika
         {
             InitializeComponent();
         }
+
+        private void EntryMoney_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -20,25 +20,22 @@ namespace JuuniPraktika
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Planner> items = new List<Planner>();
         public MainWindow()
         {
             int dateall = 0;
             InitializeComponent();
-            List<Planner> items = new List<Planner>();
-            //items.Add(new Planner() { Date = 1, Limit = 10, Used = 7, Leftover = 3 });
+            //List<Planner> items = new List<Planner>();
             for (int i = 0; i < 31; i++)
             {
                 dateall += 1;
                 items.Add(new Planner() { Date = dateall });
             }
-            //items[1-31].Limit = MonthMoney.wholemonth;
-            int numbbs = 0;
-            //for (int i = 0; i < 30; i++)
+            //for (int i = 0; i < 31; i++)
             //{
+            //    items[numbbs].Limit = OneMonth;
             //    numbbs += 1;
-            //    items[numbbs].Limit = MonthMoney.wholemonth;
             //}
-            items[7].Limit = MonthMoney.wholemonth;
             PlannerListBox.ItemsSource = items;
         }
 
@@ -50,15 +47,35 @@ namespace JuuniPraktika
             public double Leftover { get; set; }
         }
 
-        private void MonthlyMoney_Click(object sender, RoutedEventArgs e)
-        {
-            MonthMoney monthmoney = new MonthMoney();
-            monthmoney.Show();
-        }
-
         private void Ref_Click(object sender, RoutedEventArgs e)
         {
             PlannerListBox.Items.Refresh();
+        }
+
+        private void PlannerListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void OneMonthOK_Click(object sender, RoutedEventArgs e)
+        {
+            double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
+            textBox.Text = OneMonth.ToString();
+            int numbbs = 0;
+            for (int i = 0; i < 31; i++)
+            {
+                items[numbbs].Limit = OneMonth;
+                numbbs += 1;
+            }
+        }
+
+        private void MoneyUsedOK_Click(object sender, RoutedEventArgs e)
+        {
+            //string NimiTootel = (TootedListBox.SelectedItem as LisaSeeToode).Nimi
+            double MoneyUsedThatDay = double.Parse(MoneyUsedThisDay.Text);
+            //MoneyUsedThatDay = (PlannerListBox.SelectedItem as Planner).Used;
+            PlannerListBox.Items.Refresh();
+            (PlannerListBox.SelectedItem as Planner).Used = MoneyUsedThatDay;
         }
     }
 }
