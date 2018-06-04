@@ -1,0 +1,14 @@
+﻿<Window x:Class="JuuniPraktika.MonthMoney"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuuniPraktika"
+        mc:Ignorable="d"
+        Title="MonthMoney" Height="97.975" Width="180.759">
+    <Grid Margin="0,0,21,191">
+        <TextBox x:Name="MonthlyMoneyInsert" HorizontalAlignment="Left" Height="19" Margin="24,26,0,-45" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" Text="ex: 50.00"/>
+        <Button x:Name="CompMonthlyMoney" Content="OK" HorizontalAlignment="Left" Height="25" Margin="112,23,0,-48" VerticalAlignment="Top" Width="32" Click="CompMonthlyMoney_Click"/>
+
+    </Grid>
+</Window>

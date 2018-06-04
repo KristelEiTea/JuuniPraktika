@@ -1,0 +1,31 @@
+﻿<Window x:Class="JuuniPraktika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuuniPraktika"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="410.475" Width="721.709">
+    <Grid>
+        <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="332" Margin="18,29,0,0" VerticalAlignment="Top" Width="455">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="50"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock  Grid.Column="0" Text="{Binding Date}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding Limit}"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Used}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Leftover}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="MonthlyMoney" Content="Insert money for month" HorizontalAlignment="Left" Margin="505,29,0,0" VerticalAlignment="Top" Width="176" Height="25" Click="MonthlyMoney_Click"/>
+        <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="639,359,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click"/>
+    </Grid>
+</Window>
