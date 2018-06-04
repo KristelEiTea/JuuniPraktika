@@ -36,6 +36,7 @@ namespace JuuniPraktika
             //    items[numbbs].Limit = OneMonth;
             //    numbbs += 1;
             //}
+
             PlannerListBox.ItemsSource = items;
         }
 
@@ -76,6 +77,9 @@ namespace JuuniPraktika
             //MoneyUsedThatDay = (PlannerListBox.SelectedItem as Planner).Used;
             PlannerListBox.Items.Refresh();
             (PlannerListBox.SelectedItem as Planner).Used = MoneyUsedThatDay;
+            double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
+            (PlannerListBox.SelectedItem as Planner).Leftover = OneMonth - MoneyUsedThatDay;
+
         }
     }
 }
