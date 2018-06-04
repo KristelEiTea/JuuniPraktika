@@ -1,0 +1,17 @@
+﻿<Window x:Class="JuuniPraktika.Entry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuuniPraktika"
+        mc:Ignorable="d"
+        Title="Entry" Height="244.615" Width="303.846">
+    <Grid>
+        <Button x:Name="EntryMoney" Content="Money planner" HorizontalAlignment="Left" Margin="39,67,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <Button x:Name="EntryEvent" Content="Event calendar" HorizontalAlignment="Left" Margin="39,97,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <Button x:Name="EntryVacation" Content="Vacation planner" HorizontalAlignment="Left" Margin="39,127,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <Button x:Name="EntryHangman" Content="Hangman" HorizontalAlignment="Left" Margin="39,170,0,0" VerticalAlignment="Top" Width="220" Height="25"/>
+        <Label x:Name="label" Content="3in1 plus 1!" HorizontalAlignment="Left" Margin="32,10,-12,0" VerticalAlignment="Top" Height="52" Width="276" FontSize="36" FontWeight="Bold" FontFamily="Stencil"/>
+
+    </Grid>
+</Window>

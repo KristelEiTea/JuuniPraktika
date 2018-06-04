@@ -26,6 +26,6 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <Button x:Name="MonthlyMoney" Content="Insert money for month" HorizontalAlignment="Left" Margin="505,29,0,0" VerticalAlignment="Top" Width="176" Height="25" Click="MonthlyMoney_Click"/>
-        <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="639,359,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click"/>
+        <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="505,341,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click" RenderTransformOrigin="1.237,2.468"/>
     </Grid>
 </Window>
