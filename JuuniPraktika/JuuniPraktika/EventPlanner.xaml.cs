@@ -37,10 +37,64 @@ namespace JuuniPraktika
         {
             public int Date { get; set; }
             public string EventName { get; set; }
-            public double Time { get; set; }
+            public string Time { get; set; }
             public string Place { get; set; }
             public string Comment { get; set; }
            
+        }
+
+        private void AddAll_Click(object sender, RoutedEventArgs e)
+        {
+            
+            string EventName = (Eventbox.Text);
+            string Time = (Timebox.Text);
+            string Place = (Placebox.Text);
+            string Comment = (Commentbox.Text);
+            (PlannerListBox.SelectedItem as EventPlan).EventName = EventName;
+            (PlannerListBox.SelectedItem as EventPlan).Time = Time;
+            (PlannerListBox.SelectedItem as EventPlan).Place = Place;
+            
+            PlannerListBox.Items.Refresh();
+            Errors();
+           
+        }
+
+        private void AddComment_Click(object sender, RoutedEventArgs e)
+        {
+            string Comment = (Commentbox.Text);
+            (PlannerListBox.SelectedItem as EventPlan).Comment = Comment;
+            PlannerListBox.Items.Refresh();
+        }
+
+        private void ClearAll_Click(object sender, RoutedEventArgs e)
+        {
+            (PlannerListBox.SelectedItem as EventPlan).EventName = "No events today!";
+            (PlannerListBox.SelectedItem as EventPlan).Time = " ";
+            (PlannerListBox.SelectedItem as EventPlan).Place = "-";
+            (PlannerListBox.SelectedItem as EventPlan).Comment = "No comments here!";
+            PlannerListBox.Items.Refresh();
+
+        }
+        public void Errors()
+        {
+
+        if (Timebox.Text == null)
+            { Console.WriteLine("Please fill in all the info!");
+            }
+        if (Placebox.Text == null)
+            {
+                Console.WriteLine("Please fill in all the info!");
+            }
+        if (Eventbox.Text == null)
+            {
+                Console.WriteLine("Please fill in all the info!");
+            }
+        }
+
+        private void Eventbox_GotFocus(object sender, TextChangedEventArgs e)
+        {
+            
+
         }
     }
 }
