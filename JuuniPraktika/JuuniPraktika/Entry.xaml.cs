@@ -28,5 +28,10 @@ namespace JuuniPraktika
         {
 
         }
+
+        private void EntryHangman_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
