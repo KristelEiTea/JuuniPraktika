@@ -5,27 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JuuniPraktika"
         mc:Ignorable="d"
-        Title="EventPlanner" Height="410.475" Width="721.709">
+        Title="EventPlanner" Height="410.475" Width="755.709">
     <Grid>
-        <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="332" Margin="18,29,0,0" VerticalAlignment="Top" Width="586">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Margin="0,2">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="100"/>
-                                <ColumnDefinition Width="50"/>
-                                <ColumnDefinition Width="150"/>
+        <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="338" Margin="18,32,0,0" VerticalAlignment="Top" Width="586">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
                         </Grid.ColumnDefinitions>
-                            <TextBlock Grid.Column="0" Text="{Binding Date}"/>
-                            <TextBlock Grid.Column="1" Text="{Binding EventName}"/>
-                            <TextBlock Grid.Column="2" Text="{Binding Time}"/>
-                            <TextBlock Grid.Column="3" Text="{Binding Place}"/>
-                            <TextBlock Grid.Column="4" Text="{Binding Comment}"/>
+                        <TextBlock Grid.Column="0" Text="{Binding Date}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding EventName}"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Time}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Place}"/>
+                        <TextBlock Grid.Column="4" Text="{Binding Comment}"/>
                     </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="18,10,0,335" Width="51"/>
+        <Label Content="Name of the Event" HorizontalAlignment="Left" Margin="69,10,0,335" Width="115"/>
+        <Label Content="Time" HorizontalAlignment="Left" Margin="219,10,0,325" Width="51"/>
+        <Label Content="Place" HorizontalAlignment="Left" Margin="304,10,0,335" Width="51"/>
+        <Label Content="Comment" HorizontalAlignment="Left" Margin="395,10,0,335" Width="70" RenderTransformOrigin="0.336,0.063"/>
+        <Button Content="Add Name of the Event" HorizontalAlignment="Left" Margin="609,63,0,0" VerticalAlignment="Top" Width="134" Height="37" RenderTransformOrigin="0.075,0.466"/>
+        <Button Content="Add Place of the Event" HorizontalAlignment="Left" Margin="609,118,0,0" VerticalAlignment="Top" Width="134" Height="37" RenderTransformOrigin="0.075,0.466"/>
+        <Button Content="Add a Comment" HorizontalAlignment="Left" Margin="609,178,0,0" VerticalAlignment="Top" Width="134" Height="37" RenderTransformOrigin="0.075,0.466"/>
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="609,262,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466"/>
     </Grid>
 </Window>
