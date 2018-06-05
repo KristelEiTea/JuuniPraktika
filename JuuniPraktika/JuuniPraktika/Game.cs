@@ -32,7 +32,13 @@ namespace Hangman
                         'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                         'K', 'L', '-'};
                     break;
-               
+                case GameLanguage.Ee:
+                    Alphabet = new char[] {'А', 'B', 'C', 'D', 'E', 'F',
+                        'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+                        'Q', 'R', 'S', 'Š', 'Z', 'Ž', 'T', 'U', 'V', 'W',
+                        'Õ', 'Ä', 'Ö', 'Ü', 'X', 'Y', '-'};
+                    break;
+
             }
         }
 

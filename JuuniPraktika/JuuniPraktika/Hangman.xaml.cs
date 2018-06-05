@@ -20,7 +20,7 @@ namespace Hangman
     {
         En,
         Ee,
-        Ru,
+        
         
         
     }
