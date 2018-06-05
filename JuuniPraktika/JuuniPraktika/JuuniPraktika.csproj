@@ -61,6 +61,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Hangman.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -69,11 +73,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Game.cs" />
     <Compile Include="Entry.xaml.cs">
       <DependentUpon>Entry.xaml</DependentUpon>
     </Compile>
     <Compile Include="EventPlanner.xaml.cs">
       <DependentUpon>EventPlanner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Hangman.xaml.cs">
+      <DependentUpon>Hangman.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
