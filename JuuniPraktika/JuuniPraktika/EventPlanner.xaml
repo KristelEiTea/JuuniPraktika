@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JuuniPraktika"
         mc:Ignorable="d"
-        Title="EventPlanner" Height="410.475" Width="800.709">
+        Title="EventPlanner" Height="410.475" Width="820.709">
     <Grid>
         <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="338" Margin="18,32,0,0" VerticalAlignment="Top" Width="586">
             <ListBox.ItemTemplate>
@@ -33,12 +33,16 @@
         <Label Content="Place" HorizontalAlignment="Left" Margin="304,10,0,335" Width="51"/>
         <Label Content="Comment" HorizontalAlignment="Left" Margin="446,10,0,335" Width="70" RenderTransformOrigin="0.336,0.063"/>
         <Button x:Name="ClearAll" Content="Clear Column" HorizontalAlignment="Left" Margin="626,329,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="ClearAll_Click"/>
-        <TextBox x:Name="Eventbox" HorizontalAlignment="Left" Height="23" Margin="618,67,0,0" TextWrapping="Wrap" Text="Name of the Event" VerticalAlignment="Top" Width="165"/>
-        <TextBox x:Name="Timebox" HorizontalAlignment="Left" Height="23" Margin="618,115,0,0" TextWrapping="Wrap" Text="Time" VerticalAlignment="Top" Width="137"/>
-        <TextBox x:Name="Placebox" HorizontalAlignment="Left" Height="23" Margin="618,163,0,0" TextWrapping="Wrap" Text="Place" VerticalAlignment="Top" Width="165"/>
-        <TextBox x:Name="Commentbox" HorizontalAlignment="Left" Height="47" Margin="614,240,0,0" TextWrapping="Wrap" Text="Additional Comment" VerticalAlignment="Top" Width="165"/>
-        <Label Content="PLEASE INSERT THE FOLLOWING:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="604,17,0,0" Width="189" Height="45"/>
+        <TextBox x:Name="Eventbox" HorizontalAlignment="Left" Height="23" Margin="618,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="Timebox" HorizontalAlignment="Left" Height="23" Margin="618,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="Placebox" HorizontalAlignment="Left" Height="23" Margin="618,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="Commentbox" HorizontalAlignment="Left" Height="47" Margin="614,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <Label Content="PLEASE INSERT THE FOLLOWING:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="594,0,0,0" Width="189" Height="28"/>
         <Button x:Name="AddAll" Content="Add All" HorizontalAlignment="Left" Margin="626,191,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="AddAll_Click"/>
         <Button x:Name="AddComment" Content="Add Comment" HorizontalAlignment="Left" Margin="626,300,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="AddComment_Click"/>
+        <Label Content="Name of the Event:" HorizontalAlignment="Left" Margin="618,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Height="25" Margin="618,90,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Place:" HorizontalAlignment="Left" Height="25" Margin="618,138,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Additional Comment (not required):" HorizontalAlignment="Left" Height="25" Margin="614,215,0,0" VerticalAlignment="Top" Width="199"/>
     </Grid>
 </Window>

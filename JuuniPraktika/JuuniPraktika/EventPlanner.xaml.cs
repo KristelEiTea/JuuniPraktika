@@ -53,9 +53,10 @@ namespace JuuniPraktika
             (PlannerListBox.SelectedItem as EventPlan).EventName = EventName;
             (PlannerListBox.SelectedItem as EventPlan).Time = Time;
             (PlannerListBox.SelectedItem as EventPlan).Place = Place;
-            
-            PlannerListBox.Items.Refresh();
+
             Errors();
+            PlannerListBox.Items.Refresh();
+            
            
         }
 
@@ -77,24 +78,33 @@ namespace JuuniPraktika
         }
         public void Errors()
         {
+        if (Eventbox.Text == "")
+            {
+                Console.WriteLine("Please fill in all the info!");
+            }
 
-        if (Timebox.Text == null)
+        if (Timebox.Text == "")
             { Console.WriteLine("Please fill in all the info!");
             }
-        if (Placebox.Text == null)
+        if (Placebox.Text == "")
             {
                 Console.WriteLine("Please fill in all the info!");
             }
-        if (Eventbox.Text == null)
-            {
-                Console.WriteLine("Please fill in all the info!");
-            }
+        
         }
 
-        private void Eventbox_GotFocus(object sender, TextChangedEventArgs e)
-        {
-            
 
-        }
-    }
+        //private void Eventbox_GotFocus(object sender, TextChangedEventArgs e)
+    //    {
+    //        if (Eventbox.Text == Eventbox.Text)
+    //            Eventbox.Text = "";
+
+    //    }
+    //private void Eventbox_LostFocus(object sender, TextChangedEventArgs e)
+    //{
+
+    //}
+
+
+}
 }
