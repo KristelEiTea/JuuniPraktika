@@ -81,5 +81,12 @@ namespace JuuniPraktika
             (PlannerListBox.SelectedItem as Planner).Leftover = OneMonth - MoneyUsedThatDay;
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EventPlanner eventx = new EventPlanner();
+            eventx.Show();
+         
+        }
     }
 }

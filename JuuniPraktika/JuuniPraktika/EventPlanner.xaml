@@ -1,0 +1,48 @@
+﻿<Window x:Class="JuuniPraktika.EventPlanner"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuuniPraktika"
+        mc:Ignorable="d"
+        Title="EventPlanner" Height="410.475" Width="820.709">
+    <Grid>
+        <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="338" Margin="18,32,0,0" VerticalAlignment="Top" Width="586">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding Date}"/>
+                        <TextBlock Grid.Column="1" Text="{Binding EventName}"/>
+                        <TextBlock Grid.Column="2" Text="{Binding Time}"/>
+                        <TextBlock Grid.Column="3" Text="{Binding Place}"/>
+                        <TextBlock Grid.Column="4" Text="{Binding Comment}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Date" HorizontalAlignment="Left" Margin="18,10,0,335" Width="51"/>
+        <Label Content="Name of the Event" HorizontalAlignment="Left" Margin="69,10,0,335" Width="115"/>
+        <Label Content="Time" HorizontalAlignment="Left" Margin="219,10,0,325" Width="51"/>
+        <Label Content="Place" HorizontalAlignment="Left" Margin="304,10,0,335" Width="51"/>
+        <Label Content="Comment" HorizontalAlignment="Left" Margin="446,10,0,335" Width="70" RenderTransformOrigin="0.336,0.063"/>
+        <Button x:Name="ClearAll" Content="Clear Column" HorizontalAlignment="Left" Margin="626,329,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="ClearAll_Click"/>
+        <TextBox x:Name="Eventbox" HorizontalAlignment="Left" Height="23" Margin="618,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161"/>
+        <TextBox x:Name="Timebox" HorizontalAlignment="Left" Height="23" Margin="618,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="137"/>
+        <TextBox x:Name="Placebox" HorizontalAlignment="Left" Height="23" Margin="618,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="Commentbox" HorizontalAlignment="Left" Height="47" Margin="614,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <Label Content="PLEASE INSERT THE FOLLOWING:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="594,0,0,0" Width="189" Height="28"/>
+        <Button x:Name="AddAll" Content="Add All" HorizontalAlignment="Left" Margin="626,191,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="AddAll_Click"/>
+        <Button x:Name="AddComment" Content="Add Comment" HorizontalAlignment="Left" Margin="626,300,0,0" VerticalAlignment="Top" Width="129" Height="24" RenderTransformOrigin="0.075,0.466" Click="AddComment_Click"/>
+        <Label Content="Name of the Event:" HorizontalAlignment="Left" Margin="618,32,0,0" VerticalAlignment="Top"/>
+        <Label Content="Time:" HorizontalAlignment="Left" Height="25" Margin="618,90,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Place:" HorizontalAlignment="Left" Height="25" Margin="618,138,0,0" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Additional Comment (not required):" HorizontalAlignment="Left" Height="25" Margin="614,215,0,0" VerticalAlignment="Top" Width="199"/>
+    </Grid>
+</Window>
