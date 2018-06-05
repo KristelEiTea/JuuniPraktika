@@ -20,12 +20,13 @@ namespace Hangman
     {
         En,
         Ee,
-        
-        
-        
+
+
+
     }
 
     public partial class MainWindow : Window
+
     {
         private Game HangmanGame { get; set; }
         private List<Button> Buttons { get; set; }
@@ -51,6 +52,17 @@ namespace Hangman
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
         }
+
+        private void CreateNewSetup(object sender, RoutedEventArgs e)
+        {
+            string[] words2 = new string[]
+            {
+                "Pass", "Lennuk"
+            };
+
+            InitializeGameField(words2[new Random().Next(0, words2.Length)]);
+        }
+
 
         private void CharacterBtnClick(object sender, RoutedEventArgs e)
         {
@@ -107,7 +119,7 @@ namespace Hangman
         {
             Button button = new Button();
             button.VerticalAlignment = VerticalAlignment.Center;
-            button.HorizontalAlignment = HorizontalAlignment.Right;
+            button.HorizontalAlignment = HorizontalAlignment.Center;
             button.Width = 150;
             button.Height = 35;
 
@@ -116,6 +128,26 @@ namespace Hangman
 
             GameGrid.Children.Add(button);
         }
+        
+
+        #region Game Field Initializion
+        private void CreatNewSetup()
+        {
+            Button buttonSet = new Button();
+            buttonSet.VerticalAlignment = VerticalAlignment.Bottom;
+            buttonSet.HorizontalAlignment = HorizontalAlignment.Center;
+            buttonSet.Width = 150;
+            buttonSet.Height = 35;
+
+            buttonSet.Content = "Languages";
+            buttonSet.Click += new RoutedEventHandler(NewGameBtnClick);
+
+            GameGrid.Children.Add(buttonSet);
+
+        }
+        #endregion
+
+
 
         private void CreateImage()
         {
@@ -154,8 +186,10 @@ namespace Hangman
                 GameGrid.Children.Add(label);
             }
         }
+        #endregion
 
         private void CreateCharacterBtns(char[] alph)
+        #region test
         {
             double bot = 0;
             int count = 0;
@@ -185,7 +219,10 @@ namespace Hangman
 
                 GameGrid.Children.Add(button);
             }
+         
         }
         #endregion
+
     }
+
 }
