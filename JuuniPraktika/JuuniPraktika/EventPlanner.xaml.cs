@@ -20,6 +20,9 @@ namespace JuuniPraktika
     public partial class EventPlanner : Window
     {
         List<EventPlan> itemlist = new List<EventPlan>();
+        /// <summary>
+        /// Sets the date as 0, then adds numbers in a cycle, adds original text in the columns.
+        /// </summary>
         public EventPlanner()
         {
 
@@ -33,6 +36,9 @@ namespace JuuniPraktika
 
             PlannerListBox.ItemsSource = itemlist;
         }
+        /// <summary>
+        /// Sets the needed variables.
+        /// </summary>
         public class EventPlan
         {
             public int Date { get; set; }
@@ -42,30 +48,46 @@ namespace JuuniPraktika
             public string Comment { get; set; }
            
         }
-
+        /// <summary>
+        /// This void adds the name, time, place of the event from the text box, then refreshes the info.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddAll_Click(object sender, RoutedEventArgs e)
         {
+            //if((PlannerListBox.SelectedItem as EventPlan).EventName = 
+            //{
+
+            //}
             
             string EventName = (Eventbox.Text);
             string Time = (Timebox.Text);
             string Place = (Placebox.Text);
-            string Comment = (Commentbox.Text);
             (PlannerListBox.SelectedItem as EventPlan).EventName = EventName;
             (PlannerListBox.SelectedItem as EventPlan).Time = Time;
             (PlannerListBox.SelectedItem as EventPlan).Place = Place;
 
-            Errors();
+            //Errors(); - THEY DON'T WORK!!!!!!!!!!!
             PlannerListBox.Items.Refresh();
-            
-           
+         
         }
 
+        /// <summary>
+        /// This void adds a comment from textbox and then refreshes the shown info.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void AddComment_Click(object sender, RoutedEventArgs e)
         {
             string Comment = (Commentbox.Text);
             (PlannerListBox.SelectedItem as EventPlan).Comment = Comment;
             PlannerListBox.Items.Refresh();
         }
+        /// <summary>
+        /// This clears the info from the column by overwriting it with the original text.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
@@ -76,35 +98,27 @@ namespace JuuniPraktika
             PlannerListBox.Items.Refresh();
 
         }
-        public void Errors()
-        {
-        if (Eventbox.Text == "")
-            {
-                Console.WriteLine("Please fill in all the info!");
-            }
-
-        if (Timebox.Text == "")
-            { Console.WriteLine("Please fill in all the info!");
-            }
-        if (Placebox.Text == "")
-            {
-                Console.WriteLine("Please fill in all the info!");
-            }
+        ///PS! THESE ERRORS UNDER HERE DON'T WORK! PLEASE CHANGE THEM OR DELETE THEM
         
-        }
+        //public void Errors()
+        //{
+        //if (Eventbox.Text == "")
+        //    {
+        //        Console.WriteLine("Please fill in all the info!");
+        //    }
+
+        //if (Timebox.Text == "")
+        //    { Console.WriteLine("Please fill in all the info!");
+        //    }
+        //if (Placebox.Text == "")
+        //    {
+        //        Console.WriteLine("Please fill in all the info!");
+        //    }
+        
+        //}
 
 
-        //private void Eventbox_GotFocus(object sender, TextChangedEventArgs e)
-    //    {
-    //        if (Eventbox.Text == Eventbox.Text)
-    //            Eventbox.Text = "";
-
-    //    }
-    //private void Eventbox_LostFocus(object sender, TextChangedEventArgs e)
-    //{
-
-    //}
 
 
-}
+    }
 }
