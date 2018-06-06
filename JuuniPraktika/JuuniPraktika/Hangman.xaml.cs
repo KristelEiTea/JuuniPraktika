@@ -19,7 +19,7 @@ namespace Hangman
     public enum GameLanguage
     {
         En,
-        Ru
+        Ee
     }
 
     public partial class MainWindow : Window
@@ -35,6 +35,7 @@ namespace Hangman
             Labels = new List<Label>();
             Buttons = new List<Button>();
             CreateNewGameBtn();
+            CreateNewGameBtn1();
         }
 
         private void NewGameBtnClick(object sender, RoutedEventArgs e)
@@ -45,8 +46,14 @@ namespace Hangman
                 "America", "Asia", "language", "Australia",
                 "Eurasia", "ship", "South-America", "North-America", "Russia", "Kazakhstan", "Belarus", "Argentina",
                 "Brazil", "Columbia", "Chile", "Canada", "Greenland", "China", "Indonesia", "India", "Japan", "Mongolia", "plane" , "money",
+                "Europe", "Sweden", "Latvia", "Lithuania", "France", "Italy", "Poland", "Finland", "immigrant", "Country", "Trip", "Sea", "Event", "Clothes", "Food", "Poor", "Rich", 
+                "Tickets", "Sightseeing", "Travel", "Pank", "Cash", "Tourist", "Time", "Animals", "Free", "Friends", "Family"
+                
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
+
+
+
         }
 
         private void CharacterBtnClick(object sender, RoutedEventArgs e)
@@ -109,6 +116,20 @@ namespace Hangman
             button.Height = 35;
 
             button.Content = "New Game";
+            button.Click += new RoutedEventHandler(NewGameBtnClick);
+
+            GameGrid.Children.Add(button);
+        }
+
+        private void CreateNewGameBtn1()
+        {
+            Button button = new Button();
+            button.VerticalAlignment = VerticalAlignment.Center;
+            button.HorizontalAlignment = HorizontalAlignment.Left;
+            button.Width = 150;
+            button.Height = 35;
+
+            button.Content = "Language";
             button.Click += new RoutedEventHandler(NewGameBtnClick);
 
             GameGrid.Children.Add(button);
