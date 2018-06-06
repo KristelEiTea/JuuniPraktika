@@ -198,48 +198,8 @@ namespace JuuniPraktika
             public string ShopName { get; set; }
             public double Cost { get; set; }
             public string Type { get; set; }
+            public int Date { get; set; }
         }
-
-        //private void AddToTheShopListButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (FoodStoreNameTextbox != null && FoodStoreCostTextbox != null)
-        //    {
-        //        tyyp = "Food";
-        //        varierity = FoodStoreNameTextbox.Text;
-        //        varcost = double.Parse(FoodStoreCostTextbox.Text);
-        //        UglyLotOfIfs();
-        //        ShopListBox.Items.Refresh();
-        //    }
-        //    if (ClothesStoreNameTextbox != null && ClothesStoreCostTextbox != null)
-        //    {
-        //        tyyp = "Clothes";
-        //        varierity = ClothesStoreNameTextbox.Text.ToString();
-        //        varcost = double.Parse(ClothesStoreCostTextbox.Text);
-        //        UglyLotOfIfs();
-        //        ShopListBox.Items.Refresh();
-        //    }
-        //    if (VehicleNameTextbox != null && VehicleCostTextbox != null)
-        //    {
-        //        tyyp = "Vehicle";
-        //        varierity = VehicleNameTextbox.Text;
-        //        varcost = double.Parse(VehicleCostTextbox.Text);
-        //        UglyLotOfIfs();
-        //        ShopListBox.Items.Refresh();
-        //    }
-        //    if (OtherNameTextbox != null && OtherCostTextbox != null)
-        //    {
-        //        tyyp = "Other";
-        //        varierity = OtherNameTextbox.Text;
-        //        varcost = double.Parse(OtherCostTextbox.Text);
-        //        UglyLotOfIfs();
-        //        ShopListBox.Items.Refresh();
-        //    }
-        //    else
-        //    {
-        //        error eror = new error();
-        //        eror.Show();
-        //    }
-        //}
 
         private void refresh1_Click(object sender, RoutedEventArgs e)
         {
@@ -418,7 +378,7 @@ namespace JuuniPraktika
             #region Ugly Lot of if's
             if (Day == "1")
             {
-                ShopsList0.Add(new ShopListDaily() { ShopName = varierity, Cost = varcost, Type = tyyp });
+                ShopsList0.Add(new ShopListDaily() { ShopName = varierity, Cost = varcost, Type = tyyp/* , Date = Day*/ });
             }
             if (Day == "2")
             {

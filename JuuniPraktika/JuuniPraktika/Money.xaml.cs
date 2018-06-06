@@ -82,11 +82,12 @@ namespace JuuniPraktika
 
         }
 
+
         private void SelectDayListOpen_Click(object sender, RoutedEventArgs e)
         {
             ShopList shoplist = new ShopList();
             shoplist.Show();
-            shoplist.ShopListDay.Text = 0.ToString(); ;
+            shoplist.ShopListDay.Text = 0.ToString();
         }
     }
 }
