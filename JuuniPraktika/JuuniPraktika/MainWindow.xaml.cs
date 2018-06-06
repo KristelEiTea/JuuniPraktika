@@ -60,26 +60,42 @@ namespace JuuniPraktika
 
         private void OneMonthOK_Click(object sender, RoutedEventArgs e)
         {
-            double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
-            textBox.Text = OneMonth.ToString();
-            int numbbs = 0;
-            for (int i = 0; i < 31; i++)
+            if (PlannerListBox.SelectedItem != null)
             {
-                items[numbbs].Limit = OneMonth;
-                numbbs += 1;
+                double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
+                textBox.Text = OneMonth.ToString();
+                int numbbs = 0;
+                for (int i = 0; i < 31; i++)
+                {
+                    items[numbbs].Limit = OneMonth;
+                    numbbs += 1;
+                }
             }
-        }
 
+            else
+            {
+                MessageBox.Show("Please choose a column first!");
+            }
+
+        }
         private void MoneyUsedOK_Click(object sender, RoutedEventArgs e)
-        {
+        { 
+        
+            if(PlannerListBox.SelectedItem != null)
+            {
             //string NimiTootel = (TootedListBox.SelectedItem as LisaSeeToode).Nimi
             double MoneyUsedThatDay = double.Parse(MoneyUsedThisDay.Text);
-            //MoneyUsedThatDay = (PlannerListBox.SelectedItem as Planner).Used;
-            PlannerListBox.Items.Refresh();
+             //MoneyUsedThatDay = (PlannerListBox.SelectedItem as Planner).Used;
+             PlannerListBox.Items.Refresh();
             (PlannerListBox.SelectedItem as Planner).Used = MoneyUsedThatDay;
             double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
             (PlannerListBox.SelectedItem as Planner).Leftover = OneMonth - MoneyUsedThatDay;
 
+            }
+            else
+            {
+                MessageBox.Show("Please choose a column first!");
+            }
         }
     }
 }
