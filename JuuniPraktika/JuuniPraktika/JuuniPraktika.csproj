@@ -53,11 +53,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="error.xaml.cs">
+      <DependentUpon>error.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShopList.xaml.cs">
+      <DependentUpon>ShopList.xaml</DependentUpon>
+    </Compile>
     <Page Include="Entry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EventPlanner.xaml">
+    <Page Include="error.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -66,6 +72,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
+    <Page Include="Money.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -85,8 +92,14 @@
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Money.xaml.cs">
+      <DependentUpon>Money.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="ShopList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="410.475" Width="721.709">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.97"/>
+                <GradientStop Color="White" Offset="0.196"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="332" Margin="18,29,0,0" VerticalAlignment="Top" Width="455">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -27,18 +33,36 @@
             </ListBox.ItemTemplate>
         </ListBox>
         
-        <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="505,341,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click" RenderTransformOrigin="1.237,2.468"/>
+        <Button x:Name="Ref" Content="Refresh" HorizontalAlignment="Left" Margin="492,341,0,0" VerticalAlignment="Top" Width="75" Click="Ref_Click" RenderTransformOrigin="1.237,2.468">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
         <TextBox x:Name="OneMonthMoney" HorizontalAlignment="Left" Height="23" Margin="492,38,0,0" TextWrapping="Wrap" Text="ex. 500" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="OneMonthOK" Content="OK" HorizontalAlignment="Left" Margin="626,38,0,0" VerticalAlignment="Top" Width="44" Click="OneMonthOK_Click" Height="23"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="492,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label" Content="Insert your monthly income here:" HorizontalAlignment="Left" Margin="478,7,0,0" VerticalAlignment="Top" Width="190"/>
         <TextBox x:Name="MoneyUsedThisDay" HorizontalAlignment="Left" Height="23" Margin="492,115,0,0" TextWrapping="Wrap" Text="MoneyUsedThisDay" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="MoneyUsedOK" Content="OK" HorizontalAlignment="Left" Margin="626,115,0,0" VerticalAlignment="Top" Width="44" Height="23" Click="MoneyUsedOK_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="507,169,0,0" VerticalAlignment="Top" Width="177" Click="Button_Click"/>
-        <Label x:Name="DateLabel" Content="Date" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="23"/>
+        <Label x:Name="DateLabel" Content="Date" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="23">
+            <Label.Background>
+                <ImageBrush/>
+            </Label.Background>
+        </Label>
         <Label x:Name="LimitLabel" Content="Limit" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top"/>
         <Label x:Name="UsedLabel" Content="Used" HorizontalAlignment="Left" Margin="106,6,0,0" VerticalAlignment="Top"/>
         <Label x:Name="LeftoverLabel" Content="Leftover" HorizontalAlignment="Left" Margin="159,7,0,0" VerticalAlignment="Top"/>
-
+        <Button x:Name="SelectDayListOpen" Content="Open shoplist" HorizontalAlignment="Left" Margin="492,153,0,0" VerticalAlignment="Top" Width="178" Height="25" Click="SelectDayListOpen_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF29A891" Offset="0.929"/>
+                    <GradientStop Color="#FF237E40" Offset="0.105"/>
+                    <GradientStop Color="White" Offset="0.52"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
