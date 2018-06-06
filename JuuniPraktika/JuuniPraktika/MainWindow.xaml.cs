@@ -20,7 +20,7 @@ namespace JuuniPraktika
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Planner> items = new List<Planner>();
+        List<Planner> items = new List<Planner>();
         public MainWindow()
         {
             int dateall = 0;
@@ -82,12 +82,11 @@ namespace JuuniPraktika
 
         }
 
-
-        private void SelectDayListOpen_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ShopList shoplist = new ShopList();
-            shoplist.Show();
-            shoplist.ShopListDay.Text = 0.ToString();
+            EventPlanner eventx = new EventPlanner();
+            eventx.Show();
+         
         }
     }
 }
