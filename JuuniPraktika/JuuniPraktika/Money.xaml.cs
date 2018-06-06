@@ -20,7 +20,7 @@ namespace JuuniPraktika
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Planner> items = new List<Planner>();
+        public List<Planner> items = new List<Planner>();
         public MainWindow()
         {
             int dateall = 0;
@@ -80,6 +80,13 @@ namespace JuuniPraktika
             double OneMonth = double.Parse(OneMonthMoney.Text) / 31;
             (PlannerListBox.SelectedItem as Planner).Leftover = OneMonth - MoneyUsedThatDay;
 
+        }
+
+        private void SelectDayListOpen_Click(object sender, RoutedEventArgs e)
+        {
+            ShopList shoplist = new ShopList();
+            shoplist.Show();
+            shoplist.ShopListDay.Text = 0.ToString(); ;
         }
     }
 }
