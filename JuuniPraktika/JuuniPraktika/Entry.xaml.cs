@@ -26,6 +26,16 @@ namespace JuuniPraktika
 
         private void EntryMoney_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow money = new MainWindow();
+            money.Show();
+
+
+        }
+
+        private void EntryEvent_Click(object sender, RoutedEventArgs e)
+        {
+            EventPlanner eventx = new EventPlanner();
+            eventx.Show();
 
         }
     }

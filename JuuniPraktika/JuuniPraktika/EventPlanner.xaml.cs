@@ -49,7 +49,7 @@ namespace JuuniPraktika
            
         }
         /// <summary>
-        /// This void adds the name, time, place of the event from the text box, then refreshes the info.
+        /// This void adds the name, time, place of the event from the text box, then refreshes the info. If a column isn't chosen, the program displays an error.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -60,43 +60,66 @@ namespace JuuniPraktika
 
             //}
             
-            string EventName = (Eventbox.Text);
-            string Time = (Timebox.Text);
-            string Place = (Placebox.Text);
-            (PlannerListBox.SelectedItem as EventPlan).EventName = EventName;
-            (PlannerListBox.SelectedItem as EventPlan).Time = Time;
-            (PlannerListBox.SelectedItem as EventPlan).Place = Place;
-
-            //Errors(); - THEY DON'T WORK!!!!!!!!!!!
-            PlannerListBox.Items.Refresh();
-         
+            if (PlannerListBox.SelectedItem != null)
+            {
+                string EventName = (Eventbox.Text);
+                string Time = (Timebox.Text);
+                string Place = (Placebox.Text);
+                (PlannerListBox.SelectedItem as EventPlan).EventName = EventName;
+                (PlannerListBox.SelectedItem as EventPlan).Time = Time;
+                (PlannerListBox.SelectedItem as EventPlan).Place = Place;
+            }
+            else
+            {
+                MessageBox.Show("Please choose a column first!");
+                  
+            }
+                //Errors(); - THEY DON'T WORK!!!!!!!!!!!
+                PlannerListBox.Items.Refresh();
         }
 
         /// <summary>
-        /// This void adds a comment from textbox and then refreshes the shown info.
+        /// This void adds a comment from textbox and then refreshes the shown info. If a column isn't chosen, the program displays an error.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void AddComment_Click(object sender, RoutedEventArgs e)
+
         {
-            string Comment = (Commentbox.Text);
-            (PlannerListBox.SelectedItem as EventPlan).Comment = Comment;
+            if (PlannerListBox.SelectedItem != null)
+            {
+                string Comment = (Commentbox.Text);
+                (PlannerListBox.SelectedItem as EventPlan).Comment = Comment;
+
+            }
+            else
+            {
+                MessageBox.Show("Please choose a column first!");
+            }
+                
             PlannerListBox.Items.Refresh();
         }
+
         /// <summary>
-        /// This clears the info from the column by overwriting it with the original text.
+        /// This clears the info from the column by overwriting it with the original text and refreshes the info. If a column isn't chosen, the program displays an error.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
         private void ClearAll_Click(object sender, RoutedEventArgs e)
         {
-            (PlannerListBox.SelectedItem as EventPlan).EventName = "No events today!";
-            (PlannerListBox.SelectedItem as EventPlan).Time = " ";
-            (PlannerListBox.SelectedItem as EventPlan).Place = "-";
-            (PlannerListBox.SelectedItem as EventPlan).Comment = "No comments here!";
-            PlannerListBox.Items.Refresh();
+            if (PlannerListBox.SelectedItem != null)
+            {
+                (PlannerListBox.SelectedItem as EventPlan).EventName = "No events today!";
+                (PlannerListBox.SelectedItem as EventPlan).Time = " ";
+                (PlannerListBox.SelectedItem as EventPlan).Place = "-";
+   
+            }
+            else
+            {
+                MessageBox.Show("Please choose a column first!");
+            }
 
+             PlannerListBox.Items.Refresh();
         }
         ///PS! THESE ERRORS UNDER HERE DON'T WORK! PLEASE CHANGE THEM OR DELETE THEM
         

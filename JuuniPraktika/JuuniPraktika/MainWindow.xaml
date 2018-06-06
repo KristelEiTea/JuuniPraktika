@@ -34,7 +34,6 @@
         <Label x:Name="label" Content="Insert your monthly income here:" HorizontalAlignment="Left" Margin="478,7,0,0" VerticalAlignment="Top" Width="190"/>
         <TextBox x:Name="MoneyUsedThisDay" HorizontalAlignment="Left" Height="23" Margin="492,115,0,0" TextWrapping="Wrap" Text="MoneyUsedThisDay" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="MoneyUsedOK" Content="OK" HorizontalAlignment="Left" Margin="626,115,0,0" VerticalAlignment="Top" Width="44" Height="23" Click="MoneyUsedOK_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="35" Margin="507,169,0,0" VerticalAlignment="Top" Width="177" Click="Button_Click"/>
         <Label x:Name="DateLabel" Content="Date" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Height="23"/>
         <Label x:Name="LimitLabel" Content="Limit" HorizontalAlignment="Left" Margin="50,6,0,0" VerticalAlignment="Top"/>
         <Label x:Name="UsedLabel" Content="Used" HorizontalAlignment="Left" Margin="106,6,0,0" VerticalAlignment="Top"/>
