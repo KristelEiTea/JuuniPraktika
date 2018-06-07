@@ -31,7 +31,7 @@ namespace Hangman
                     Alphabet = new char[] {'N', 'O', 'P', 'Q', 'R',
                         'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z','A',
                         'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-                        'K', 'L', 'M', '-'};
+                        'K', 'L', 'M', '-', ' '};
                     break;
 
                 case GameLanguage.Ru:
@@ -40,6 +40,14 @@ namespace Hangman
                         'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
                         'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'};
                     break;
+
+                case GameLanguage.Ee:
+                    Alphabet = new char[] {'А', 'B', 'C', 'D', 'E', 'F',
+                        'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+                        'Q', 'R', 'S', 'Š', 'Z', 'Ž', 'T', 'U', 'V', 'W',
+                        'Õ', 'Ä', 'Ö', 'Ü', 'X', 'Y', '-'};
+                    break;
+
             }
         }
 

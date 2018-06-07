@@ -19,7 +19,8 @@ namespace Hangman
     public enum GameLanguage
     {
         En,
-        Ru
+        Ru,
+        Ee
     }
 
     public partial class MainWindow : Window
@@ -45,6 +46,8 @@ namespace Hangman
                 "America", "Asia", "language", "Australia",
                 "Eurasia", "ship", "South-America", "North-America", "Russia", "Kazakhstan", "Belarus", "Argentina",
                 "Brazil", "Columbia", "Chile", "Canada", "Greenland", "China", "Indonesia", "India", "Japan", "Mongolia", "plane" , "money",
+                "Paris", "Tallinn", "Oslo", "Helsingi", "Stockholm", "Ohio", "Florida", "Washington", "Texas", "Oklahoma", "Moscow", "London",
+                "Dallas", "Riga", "Varssav", "Vilnus", "Tartu", "Sydney", "Bakewell", "hangman", "wallet", "suitcase", "visa", "bus"
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
         }
