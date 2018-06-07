@@ -47,7 +47,10 @@ namespace Hangman
                 "Eurasia", "ship", "South-America", "North-America", "Russia", "Kazakhstan", "Belarus", "Argentina",
                 "Brazil", "Columbia", "Chile", "Canada", "Greenland", "China", "Indonesia", "India", "Japan", "Mongolia", "plane" , "money",
                 "Paris", "Tallinn", "Oslo", "Helsingi", "Stockholm", "Ohio", "Florida", "Washington", "Texas", "Oklahoma", "Moscow", "London",
-                "Dallas", "Riga", "Varssav", "Vilnus", "Tartu", "Sydney", "Bakewell", "hangman", "wallet", "suitcase", "visa", "bus"
+                "Dallas", "Riga", "Varssav", "Vilnus", "Tartu", "Sydney", "Bakewell", "hangman", "wallet", "suitcase", "visa", "bus", "sea", "road", 
+                "Iran", "Sahara", "Iraq", "UK", "United Kingdom", "Turkey", "Ukraine", "San Marino", "Oceania",
+                "Suriname", "Peru", "Kosvo", "United Arab Emirates", "Uzbeksitan", "Yemen", "Saint Kitts and Nevis",
+                "Central African Republic"
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
         }
