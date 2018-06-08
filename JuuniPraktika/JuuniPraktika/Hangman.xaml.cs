@@ -18,7 +18,7 @@ namespace Hangman
     public enum GameLanguage
     {
 
-        En,
+        En
        
 
         
