@@ -40,7 +40,7 @@ namespace Vacation
                         Complete = false,
                         HotelPrice = htPrice
                     });
-
+                     
                 }
 
             }
