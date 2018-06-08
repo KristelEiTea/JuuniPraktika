@@ -13,6 +13,7 @@ namespace Vacation
     public partial class Puhkused : Window
     {
         public Puhkused()
+
         {
             InitializeComponent();
             // Get a reference to the trips collection.
@@ -20,6 +21,7 @@ namespace Vacation
             Trips _hotels = (Trips)this.Resources["hotels"];
 
             using (var reader = new StreamReader(@"C:\Users\katri\Documents\GitHub\JuuniPraktika\JuuniPraktika\JuuniPraktika\TextFile1.txt"))
+
             {
                 Decimal trPrice;
                 Decimal htPrice;
@@ -33,14 +35,14 @@ namespace Vacation
                     Decimal.TryParse(values[3], out htPrice);
                     _trips.Add(new Trip()
                     {
-                        ProjectName = values[0],
-                        TripName = values[1],
+
+                        ContinentName = values[0],
+                        CountryName = values[1],
                         TripPrice = trPrice,
                         //Complete = (rnd.Next(1, 20) % 2 == 0),
                         Complete = false,
                         HotelPrice = htPrice
                     });
-
                 }
 
             }
@@ -50,6 +52,8 @@ namespace Vacation
             //{
             //    _trips.Add(new Trip()
             //    {
+            //        ContinentName = "Kontinent " + ((i % 3) + 1).ToString(),
+            //        CountryName = "Riik " + i.ToString(),
             //        ProjectName = "Kontinent " + ((i % 3) + 1).ToString(),
             //        TripName = "Riik " + i.ToString(),
             //        DueDate = DateTime.Now.AddDays(i),
@@ -76,7 +80,9 @@ namespace Vacation
             if (cvTrips != null && cvTrips.CanGroup == true)
             {
                 cvTrips.GroupDescriptions.Clear();
-                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("ProjectName"));
+                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("Continent Name"));
+
+                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("City Name"));
                 cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("Complete"));
             }
         }
@@ -98,6 +104,11 @@ namespace Vacation
                 else
                     e.Accepted = true;
             }
+        }
+
+        private void dataGrid1_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+
         }
     }
 
@@ -146,7 +157,8 @@ namespace Vacation
         private bool m_Editing = false;
 
         // Public properties. 
-        public string ProjectName
+        public string ContinentName
+
         {
             get { return this.m_Continent; }
             set
@@ -154,12 +166,13 @@ namespace Vacation
                 if (value != this.m_Continent)
                 {
                     this.m_Continent = value;
-                    NotifyPropertyChanged("ProjectName");
+                    NotifyPropertyChanged("ContinentName");
                 }
             }
         }
 
-        public string TripName
+
+        public string CountryName
         {
             get { return this.m_TripName; }
             set
@@ -167,7 +180,7 @@ namespace Vacation
                 if (value != this.m_TripName)
                 {
                     this.m_TripName = value;
-                    NotifyPropertyChanged("TripName");
+                    NotifyPropertyChanged("CountryName");
                 }
             }
         }
@@ -262,8 +275,8 @@ namespace Vacation
         {
             if (m_Editing == true)
             {
-                this.ProjectName = temp_Trip.ProjectName;
-                this.TripName = temp_Trip.TripName;
+                this.ContinentName = temp_Trip.ContinentName;
+                this.CountryName = temp_Trip.CountryName;
                 this.TripPrice = temp_Trip.TripPrice;
                 this.Complete = temp_Trip.Complete;
                 this.HotelPrice = temp_Hotel.HotelPrice;
