@@ -19,10 +19,7 @@ namespace Hangman
     {
 
         En
-       
 
-        
-        
 
     }
 
