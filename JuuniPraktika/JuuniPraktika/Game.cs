@@ -34,10 +34,6 @@ namespace Hangman
                         'K', 'L', 'M', '-'};
                     break;
 
-<<<<<<< HEAD
-                
-=======
->>>>>>> master
             }
         }
 
