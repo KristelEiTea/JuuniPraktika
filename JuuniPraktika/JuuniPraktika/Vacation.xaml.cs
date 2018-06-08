@@ -8,18 +8,18 @@ using System.IO;
 namespace Vacation
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Puhkused.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Puhkused : Window
     {
-        public MainWindow()
+        public Puhkused()
         {
             InitializeComponent();
             // Get a reference to the trips collection.
             Trips _trips = (Trips)this.Resources["trips"];
             Trips _hotels = (Trips)this.Resources["hotels"];
 
-            using (var reader = new StreamReader(@"C:\Users\opilane\Documents\GitHub\JuuniPraktika\JuuniPraktika\JuuniPraktika\Vacation.xaml.cs"))
+            using (var reader = new StreamReader(@"C:\Users\katri\Documents\GitHub\JuuniPraktika\JuuniPraktika\JuuniPraktika\TextFile1.txt"))
             {
                 Decimal trPrice;
                 Decimal htPrice;

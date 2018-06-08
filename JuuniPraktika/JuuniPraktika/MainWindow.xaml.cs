@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace JuuniPraktika
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Puhkused.xaml
     /// </summary>
     public partial class MainWindow : Window
     {

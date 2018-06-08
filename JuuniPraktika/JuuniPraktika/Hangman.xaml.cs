@@ -22,14 +22,14 @@ namespace Hangman
         
     }
 
-    public partial class MainWindow : Window
+    public partial class Poomine : Window
     {
         private Game HangmanGame { get; set; }
         private List<Button> Buttons { get; set; }
         private List<Label> Labels { get; set; }
         private Image StageImage { get; set; }
 
-        public MainWindow()
+        public Poomine()
         {
             InitializeComponent();
             Labels = new List<Label>();
@@ -42,9 +42,11 @@ namespace Hangman
 
 
             string[] words = new string[] {
-                "America", "Asia", "language", "Australia",
+                 "America", "Asia", "language", "Australia",
                 "Eurasia", "ship", "South-America", "North-America", "Russia", "Kazakhstan", "Belarus", "Argentina",
                 "Brazil", "Columbia", "Chile", "Canada", "Greenland", "China", "Indonesia", "India", "Japan", "Mongolia", "plane" , "money",
+                "Europe", "Sweden", "Latvia", "Lithuania", "France", "Italy", "Poland", "Finland", "immigrant", "Country", "Trip", "Sea", "Event", "Clothes", "Food", "Poor", "Rich",
+                "Tickets", "Sightseeing", "Travel", "Pank", "Cash", "Tourist", "Time", "Animals", "Free", "Friends", "Family"
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
         }
