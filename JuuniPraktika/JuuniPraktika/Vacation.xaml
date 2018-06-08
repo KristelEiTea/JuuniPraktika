@@ -1,4 +1,5 @@
-﻿<Window x:Class="Vacation.MainWindow"
+<Window x:Class="Vacation.Puhkused"
+
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,6 +8,7 @@
         xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
         mc:Ignorable="d"
         Title="Vacation" Height="575" Width="525">
+
     <Window.Resources>
         <local:CompleteConverter x:Key="completeConverter" />
         <local:Trips x:Key="trips" />
@@ -18,6 +20,7 @@
                 <scm:SortDescription PropertyName="DueDate" />
             </CollectionViewSource.SortDescriptions>
             <CollectionViewSource.GroupDescriptions>
+
                 <PropertyGroupDescription PropertyName="ContinentName" />
                 <PropertyGroupDescription PropertyName="Complete" />
             </CollectionViewSource.GroupDescriptions>
@@ -87,8 +90,6 @@
                       Checked="CompleteFilter_Changed" Unchecked="CompleteFilter_Changed" />
             <Button Content="Remove Groups" Margin="10,2,2,2" Click="UngroupButton_Click" />
             <Button Content="Group by Project/Status" Margin="2" Click="GroupButton_Click" />
-            <Button Content="Back" Width="72" Margin="0,2" Click="Button_Click"/>
         </StackPanel>
-
     </Grid>
 </Window>

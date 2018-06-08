@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Vacation;
+using Hangman;
 
 namespace JuuniPraktika
 {
@@ -27,6 +29,19 @@ namespace JuuniPraktika
         private void EntryMoney_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void EntryHangman_Click(object sender, RoutedEventArgs e)
+        {
+            Poomine aken2 = new Poomine();
+            aken2.Show();
+        }
+
+        private void EntryVacation_Click(object sender, RoutedEventArgs e)
+        {
+            Puhkused aken = new Puhkused();
+            aken.Show();
+            
         }
     }
 }

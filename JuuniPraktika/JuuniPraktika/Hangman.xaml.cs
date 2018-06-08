@@ -21,14 +21,14 @@ namespace Hangman
         En
     }
 
-    public partial class MainWindow : Window
+    public partial class Poomine : Window
     {
         private Game HangmanGame { get; set; }
         private List<Button> Buttons { get; set; }
         private List<Label> Labels { get; set; }
         private Image StageImage { get; set; }
 
-        public MainWindow()
+        public Poomine()
         {
             InitializeComponent();
             Labels = new List<Label>();
@@ -44,14 +44,14 @@ namespace Hangman
                 "America", "Asia", "language", "Australia",
                 "Eurasia", "ship", "South-America", "North-America", "Russia", "Kazakhstan", "Belarus", "Argentina",
                 "Brazil", "Columbia", "Chile", "Canada", "Greenland", "China", "Indonesia", "India", "Japan", "Mongolia", "plane" , "money",
-                "Paris", "Tallinn", "Oslo", "Helsingi", "Stockholm", "Ohio", "Florida", "Washington", "Texas", "Oklahoma", "Moscow", "London",
-                "Dallas", "Riga", "Varssav", "Vilnus", "Tartu", "Sydney", "Bakewell", "hangman", "wallet", "suitcase", "visa", "bus", "sea", "road", 
-                "Iran", "Sahara", "Iraq", "UK",  "Turkey", "Ukraine", "San Marino", "Oceania",
-                "Suriname", "Peru", "Kosvo", "Mexico", "Uzbeksitan", "Yemen", "Greneda",
-                "Puerto Rico", "sun", "Earth", "food", "Hollywood", "Big Ben", "Fiji"
+                "Europe", "Sweden", "Latvia", "Lithuania", "France", "Italy", "Poland", "Finland", "immigrant", "Country", "Trip", "Sea", "Event", "Clothes", "Food", "Poor", "Rich",
+                "Tickets", "Sightseeing", "Travel", "Pank", "Cash", "Tourist", "Time", "Animals", "Free", "Friends", "Family"
+
                 };
             InitializeGameField(words[new Random().Next(0, words.Length)]);
+
         }
+
 
         private void CharacterBtnClick(object sender, RoutedEventArgs e)
         {

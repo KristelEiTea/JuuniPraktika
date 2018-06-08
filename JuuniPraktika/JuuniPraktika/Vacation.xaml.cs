@@ -8,18 +8,20 @@ using System.IO;
 namespace Vacation
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Puhkused.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Puhkused : Window
     {
-        public MainWindow()
+        public Puhkused()
+
         {
             InitializeComponent();
             // Get a reference to the trips collection.
             Trips _trips = (Trips)this.Resources["trips"];
             Trips _hotels = (Trips)this.Resources["hotels"];
 
-            using (var reader = new StreamReader(@"C:\Users\opilane\Documents\GitHub\Vacation\Vacation\TextFile1.txt"))
+            using (var reader = new StreamReader(@"C:\Users\katri\Documents\GitHub\JuuniPraktika\JuuniPraktika\JuuniPraktika\TextFile1.txt"))
+
             {
                 Decimal trPrice;
                 Decimal htPrice;
@@ -33,6 +35,7 @@ namespace Vacation
                     Decimal.TryParse(values[3], out htPrice);
                     _trips.Add(new Trip()
                     {
+
                         ContinentName = values[0],
                         CountryName = values[1],
                         TripPrice = trPrice,
@@ -40,7 +43,6 @@ namespace Vacation
                         Complete = false,
                         HotelPrice = htPrice
                     });
-                     
                 }
 
             }
@@ -52,6 +54,8 @@ namespace Vacation
             //    {
             //        ContinentName = "Kontinent " + ((i % 3) + 1).ToString(),
             //        CountryName = "Riik " + i.ToString(),
+            //        ProjectName = "Kontinent " + ((i % 3) + 1).ToString(),
+            //        TripName = "Riik " + i.ToString(),
             //        DueDate = DateTime.Now.AddDays(i),
             //        Complete = (i % 2 == 0)
             //    });
@@ -76,7 +80,9 @@ namespace Vacation
             if (cvTrips != null && cvTrips.CanGroup == true)
             {
                 cvTrips.GroupDescriptions.Clear();
-                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("ContinentName"));
+                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("Continent Name"));
+
+                cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("City Name"));
                 cvTrips.GroupDescriptions.Add(new PropertyGroupDescription("Complete"));
             }
         }
@@ -98,11 +104,6 @@ namespace Vacation
                 else
                     e.Accepted = true;
             }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
 
         private void dataGrid1_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -157,6 +158,7 @@ namespace Vacation
 
         // Public properties. 
         public string ContinentName
+
         {
             get { return this.m_Continent; }
             set
@@ -168,6 +170,7 @@ namespace Vacation
                 }
             }
         }
+
 
         public string CountryName
         {
