@@ -18,9 +18,7 @@ namespace Hangman
 {
     public enum GameLanguage
     {
-        En,
-        Ru,
-        Ee
+        En
     }
 
     public partial class MainWindow : Window
