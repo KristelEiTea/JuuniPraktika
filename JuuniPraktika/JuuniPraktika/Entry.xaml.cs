@@ -28,7 +28,8 @@ namespace JuuniPraktika
 
         private void EntryMoney_Click(object sender, RoutedEventArgs e)
         {
-
+            Money moneyplanner = new Money();
+            moneyplanner.Show();
         }
 
         private void EntryHangman_Click(object sender, RoutedEventArgs e)
@@ -42,6 +43,12 @@ namespace JuuniPraktika
             Puhkused aken = new Puhkused();
             aken.Show();
             
+        }
+
+        private void EntryEvent_Click(object sender, RoutedEventArgs e)
+        {
+            EventPlanner eventplanner = new EventPlanner();
+            eventplanner.Show();
         }
     }
 }

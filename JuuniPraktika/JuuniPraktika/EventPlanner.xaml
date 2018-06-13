@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JuuniPraktika"
         mc:Ignorable="d"
-        Title="EventPlanner" Height="410.475" Width="820.709">
+        Title="EventPlanner" Height="425.615" Width="821.55">
     <Grid>
         <ListBox x:Name="PlannerListBox" HorizontalAlignment="Left" Height="338" Margin="18,32,0,0" VerticalAlignment="Top" Width="586">
             <ListBox.ItemTemplate>
@@ -44,5 +44,6 @@
         <Label Content="Time:" HorizontalAlignment="Left" Height="25" Margin="618,90,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Content="Place:" HorizontalAlignment="Left" Height="25" Margin="618,138,0,0" VerticalAlignment="Top" Width="125"/>
         <Label Content="Additional Comment (not required):" HorizontalAlignment="Left" Height="25" Margin="614,215,0,0" VerticalAlignment="Top" Width="199"/>
+        <Button x:Name="Save" Content="Save" HorizontalAlignment="Left" Margin="654,365,0,0" VerticalAlignment="Top" Width="75" Click="Save_Click"/>
     </Grid>
 </Window>

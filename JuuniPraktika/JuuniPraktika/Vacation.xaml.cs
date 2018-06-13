@@ -20,7 +20,7 @@ namespace Vacation
             Trips _trips = (Trips)this.Resources["trips"];
             Trips _hotels = (Trips)this.Resources["hotels"];
 
-            using (var reader = new StreamReader(@"C:\Users\katri\Documents\GitHub\JuuniPraktika\JuuniPraktika\JuuniPraktika\TextFile1.txt"))
+            using (var reader = new StreamReader(@"../../TextFile1.txt"))
 
             {
                 Decimal trPrice;

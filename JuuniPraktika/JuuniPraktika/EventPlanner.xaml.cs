@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace JuuniPraktika
 {
@@ -30,8 +32,10 @@ namespace JuuniPraktika
                 dateall += 1;
                 itemlist.Add(new EventPlan() { Date = dateall , Comment = "No comments here!", EventName = "No events today!", Place = "-"});
             }
-
+            var tmpitems = ReadDataFromFile();
+            itemlist = tmpitems.ToList();
             PlannerListBox.ItemsSource = itemlist;
+
         }
         public class EventPlan
         {
@@ -93,18 +97,37 @@ namespace JuuniPraktika
         
         }
 
+        private void SaveDataToFile()
+        {
+            var json = JsonConvert.SerializeObject(PlannerListBox.Items);
+            File.WriteAllText("EventPlannerListBoxData.txt", json);
+        }
+
+        private IEnumerable<EventPlan> ReadDataFromFile()
+        {
+            var json = File.ReadAllText("EventPlannerListBoxData.txt");
+            var data = JsonConvert.DeserializeObject<IEnumerable<EventPlan>>(json);
+            return data;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            SaveDataToFile();
+            this.Close();
+        }
+
 
         //private void Eventbox_GotFocus(object sender, TextChangedEventArgs e)
-    //    {
-    //        if (Eventbox.Text == Eventbox.Text)
-    //            Eventbox.Text = "";
+        //    {
+        //        if (Eventbox.Text == Eventbox.Text)
+        //            Eventbox.Text = "";
 
-    //    }
-    //private void Eventbox_LostFocus(object sender, TextChangedEventArgs e)
-    //{
+        //    }
+        //private void Eventbox_LostFocus(object sender, TextChangedEventArgs e)
+        //{
 
-    //}
+        //}
 
 
-}
+    }
 }

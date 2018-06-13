@@ -1,0 +1,25 @@
+﻿<Window x:Class="JuuniPraktika.ThisMonth1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JuuniPraktika"
+        mc:Ignorable="d"
+        Title="ThisMonth" Height="300" Width="300">
+    <Grid>
+        <Label x:Name="UsedOnFood" Content="Money used on food:" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label x:Name="UsedOnClothes" Content="Money used on clothes:" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label x:Name="UsedOnTransport" Content="Money used on transport:" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.335,0.253" Width="162"/>
+        <Label x:Name="UsedOnOtherItems" Content="Money used on other items:" HorizontalAlignment="Left" Margin="10,109,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label x:Name="label3" Content="Big outgoes this month:" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Width="272"/>
+        <ListBox x:Name="BigOutGoesListBox" HorizontalAlignment="Left" Height="100" Margin="10,159,0,0" VerticalAlignment="Top" Width="272"/>
+        <TextBox x:Name="UsedOnFoodTextbox" HorizontalAlignment="Left" Height="17" Margin="172,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="UsedOnClothesTextbox" HorizontalAlignment="Left" Height="17" Margin="172,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <TextBox x:Name="UsedOnTransportTextbox" Height="17" Margin="172,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110"/>
+        <TextBox x:Name="UsedOnOtherTextbox" HorizontalAlignment="Left" Height="16" Margin="172,113,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <Label x:Name="UsedOverall" Content="Money used overall:" HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top" Width="162"/>
+        <TextBox x:Name="UsedOverallTextbox" HorizontalAlignment="Left" Height="17" Margin="172,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110"/>
+        <Label x:Name="label" Content="In the future update" HorizontalAlignment="Left" Margin="10,159,0,0" VerticalAlignment="Top" Height="100" Width="272"/>
+
+    </Grid>
+</Window>
